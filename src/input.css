@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base{
+    @font-face {
+        font-family: "dana-sm";
+        src: url(../public/font/Dana/DanaFaNum-Regular.woff2);
+    }
+    @font-face {
+        font-family: "dana-md";
+        src: url(../public/font/Dana/DanaFaNum-Medium.woff2);
+    }
+    @font-face {
+        font-family: "dana-bold";
+        src: url(../public/font/Dana/DanaFaNum-DemiBold.woff2);
+    }
+    
+}
+@layer components{
+    .image-wrapper::after{
+        content: "";
+        @apply bg-gray-400 top-10 left-10 absolute w-full h-full z-[-1] dark:bg-gray-800
+    }
+    .image-wrapper::before{
+        content: "";
+        @apply border border-gray-300 bottom-10 right-10 absolute w-full h-full dark:border-gray-700
+    }
+    .image-wrapper{
+        background-image: url();
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .box{
+        @apply bg-white dark:bg-gray-800 dark:border-0 border p-5 shadow h-[221.6px] select-none
+    }
+    .title-box{
+        @apply font-dana-bold text-lg text-gray-800 dark:text-white
+    }
+    h1,
+    h2,
+    h3,
+    h5,
+    h6,
+    p,
+    a,
+    span{
+        @apply selection:bg-red-500 
+    }
+    .template{
+        background-image: url(../public/img/cod.png);
+        background-position: right center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #shadow-template{
+        box-shadow: 0px 0px 50px 1px #06b6d4;
+    }
+    .title{
+        @apply text-xl sm:text-2xl text-center font-dana-bold text-gray-800 tracking-tight mb-14 dark:text-gray-100
+    }
+    .ques-wrapper{
+        @apply mb-5 bg-white shadow dark:bg-gray-800 text-gray-800 dark:text-gray-100  rounded-lg
+    }
+    .ques{
+        @apply cursor-pointer font-dana-md text-lg sm:text-xl tracking-tight  px-3 py-4 sm:px-4 sm:py-5 flex justify-between items-center 
+    }
+}
